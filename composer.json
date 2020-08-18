@@ -1,0 +1,29 @@
+{
+  "name": "vianetz/secure-cookies-magento1",
+  "description": "A Magento 1 extension that improves the cookie settings for Magento frontend and admin session cookies.",
+  "type": "magento-module",
+  "keywords": [
+    "vianetz",
+    "magento"
+  ],
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Christoph Massmann",
+      "email": "cm@vianetz.com",
+      "homepage": "https://www.vianetz.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "support@vianetz.com",
+    "faq": "https://www.vianetz.com/en/magento-faq"
+  },
+  "require": {
+    "php": ">=7.3.0"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master",
+    "vianetz/coding-standards": "dev-master"
+  }
+}

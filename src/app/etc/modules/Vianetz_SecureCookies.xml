@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Vianetz_SecureCookies>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Core />
+                <Mage_Admin />
+            </depends>
+        </Vianetz_SecureCookies>
+    </modules>
+</config> 

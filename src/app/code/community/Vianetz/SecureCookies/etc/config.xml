@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Vianetz_SecureCookies>
+            <version>1.0.0</version>
+        </Vianetz_SecureCookies>
+    </modules>
+    <global>
+        <models>
+            <core>
+                <rewrite>
+                    <cookie>Vianetz_SecureCookies_Model_Cookie</cookie>
+                    <session>Vianetz_SecureCookies_Model_Session</session>
+                </rewrite>
+            </core>
+        </models>
+    </global>
+</config>
