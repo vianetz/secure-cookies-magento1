@@ -1,6 +1,21 @@
 <?php
 declare(strict_types=1);
 
+/**
+ * @section LICENSE
+ * This file is created / modified by vianetz ({@link https://www.vianetz.com}).
+ * The Magento extension is distributed under the GPL license.
+ *
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@vianetz.com so we can send you a copy immediately.
+ *
+ * @license https://www.gnu.org/licenses/gpl-3.0.txt GNU GENERAL PUBLIC LICENSE
+ */
+
+/**
+ * @package Vianetz_SecureCookies
+ */
 final class Vianetz_SecureCookies_Model_Cookie extends Mage_Core_Model_Cookie
 {
     public const SAMESITE_LAX = 'Lax';
@@ -34,7 +49,7 @@ final class Vianetz_SecureCookies_Model_Cookie extends Mage_Core_Model_Cookie
         }
 
         $cookieOptions = [
-            'expires' => $period == 0 ? 0 : time() + $period,
+            'expires' => (int)$period === 0 ? 0 : time() + $period,
             'path' => $path ?? $this->getPath(),
             'domain' => $domain ?? $this->getDomain(),
             'secure' => $secure ?? $this->isSecure(),
