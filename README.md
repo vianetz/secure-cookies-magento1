@@ -7,7 +7,7 @@ Facts
 
 Description
 -----------
-This module for the Magento 1 online shop software improves the default Magento session cookies:
+This extension for the Magento 1 online shop software improves the default Magento session cookies:
 - The `frontend` cookie will be set to `Secure` and `SameSite=Lax`
 - The `adminhtml` cookie will be set to `SameSite=Strict` (this cookie is by default set to `Secure` already)
 
@@ -20,22 +20,30 @@ Requirements
 
 Installation Instructions
 -------------------------
+
 For installation notes please see also [our FAQ](https://www.vianetz.com/en/faq/how-to-install-the-magento-extension.html).
 
+#### Preparations
 1. Do a backup of your Magento installation for safety reasons.
-1. Disable Magento compilation feature (if activated): System > Tools > Compiler
-1. Unzip the setup package and copy the contents of the src/ folder into the Magento root folder. (The folder structure
+2. Disable Magento compilation feature (if activated): _System > Tools > Compiler_
+
+#### a) Installation with composer (recommended)
+3. Run `composer install vianetz/secure-cookies-magento1`
+
+#### or b) Installation with modman
+3. Clone this repository into your modman folder and run `modman deploy-all`
+
+#### or c) Manual Installation
+3. Unzip the setup package and copy the contents of the `src/` folder into the Magento root folder. (The folder structure
    is the same as in your Magento installation. No files will be overwritten.)
    Please assure that the files are uploaded with the same file user permissions as the Magento installation!
-1. Clear the Magento cache (and related caches like APC if available)
-1. Logout from the admin panel and then login again
-1. Enable the Magento compilation feature (if it was activated before): System > Tools > Compiler
 
-As an alternative you can install the module via modman.
-Please find [more information](https://github.com/colinmollenhour/modman) about that installation method
-(thanks @colinmollenhour).
+#### Final Tasks
+4. Clear the Magento cache (and related caches like APC/FPC/Opcache if available)
+5. Logout from the admin panel and then login again
+6. Enable the Magento compilation feature (if it was activated before): _System > Tools > Compiler_
 
-We also offer paid installation services. If you are interested please contact me at support@vianetz.com.
+We also offer paid installation services. If you are interested please [contact me](https://www.vianetz.com/en/contacts).
 
 Uninstallation
 --------------
@@ -44,25 +52,20 @@ Uninstallation
 
 Frequently Asked Questions
 --------------------------
-Please find the Frequently Asked Questions on our website www.vianetz.com/en/faq.
+Please find the [Frequently Asked Questions on our website](https://www.vianetz.com/en/faq).
 
 Support
 -------
-If you have any issues or suggestions with this extension, please do not hesitate to
-contact me at https://www.vianetz.com/en/contacts or support@vianetz.com.
+If you have any issues or suggestions with this extension, please do not hesitate to [contact me](https://www.vianetz.com/en/contacts).
 
 Developer
 ---------
-Christoph Massmann
-[https://www.vianetz.com](https://www.vianetz.com)
+Christoph Massmann  
+[https://www.vianetz.com](https://www.vianetz.com)  
 [@vianetz](https://twitter.com/vianetz)
 
-Licence
+License
 -------
-[GNU GENERAL PUBLIC LICENSE](http://www.gnu.org/licenses/gpl-3.0.txt)
-
-Copyright
----------
-(c) since 2008 vianetz
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 
 This Magento Extension uses Semantic Versioning - please find more information at http://semver.org.
