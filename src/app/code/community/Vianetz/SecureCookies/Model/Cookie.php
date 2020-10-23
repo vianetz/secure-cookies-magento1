@@ -57,8 +57,23 @@ final class Vianetz_SecureCookies_Model_Cookie extends Mage_Core_Model_Cookie
             'samesite' => $this->getSameSite(),
         ];
 
-        setcookie($name, $value, $cookieOptions);
+        $this->setCookie($name, $value, $cookieOptions);
 
         return $this;
+    }
+
+    /**
+     * @param mixed $value
+     * @param array<string,mixed> $cookieOptions
+     */
+    private function setCookie(string $name, $value, array $cookieOptions): void
+    {
+        if (PHP_VERSION_ID < 70300) {
+            // a bit ugly but we use a bug in setcookie() method for older PHP versions to set the samesite attribute
+            $path = $cookieOptions['path'] . '; samesite=' . $cookieOptions['samesite'];
+            setcookie($name, $value, $cookieOptions['expires'], $path, $cookieOptions['domain'], $cookieOptions['secure'], $cookieOptions['httponly']);
+        } else {
+            setcookie($name, $value, $cookieOptions);
+        }
     }
 }

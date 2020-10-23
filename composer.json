@@ -20,7 +20,7 @@
     "faq": "https://www.vianetz.com/en/magento-faq"
   },
   "require": {
-    "php": ">=7.3.0"
+    "php": ">=7.2.0"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",

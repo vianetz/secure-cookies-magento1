@@ -28,7 +28,7 @@ For installation notes please see also [our FAQ](https://www.vianetz.com/en/faq/
 2. Disable Magento compilation feature (if activated): _System > Tools > Compiler_
 
 #### a) Installation with composer (recommended)
-3. Run `composer install vianetz/secure-cookies-magento1`
+3. Run `composer require vianetz/secure-cookies-magento1`
 
 #### or b) Installation with modman
 3. Clone this repository into your modman folder and run `modman deploy-all`
