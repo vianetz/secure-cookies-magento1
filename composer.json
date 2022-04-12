@@ -4,7 +4,8 @@
   "type": "magento-module",
   "keywords": [
     "vianetz",
-    "magento"
+    "magento",
+    "openmage"
   ],
   "license": "GPL-3.0-or-later",
   "authors": [
@@ -23,7 +24,7 @@
     "php": ">=7.2.0"
   },
   "require-dev": {
-    "roave/security-advisories": "dev-master",
+    "roave/security-advisories": "dev-latest",
     "vianetz/coding-standards": "dev-master"
   }
 }

@@ -15,7 +15,7 @@ This is required e.g. in Chrome and Firefox as described in [this Google blog po
 
 Requirements
 ------------
-- PHP >= 7.3.0 (because of the new `setcookie()` parameter to allow `SameSite` attribute setting)
+- PHP >= 7.2.0
 - Magento >= 1.9
 
 Installation Instructions

@@ -17,7 +17,7 @@ declare(strict_types=1);
  * @package Vianetz_SecureCookies
  * @method \Vianetz_SecureCookies_Model_Cookie getCookie()
  */
-final class Vianetz_SecureCookies_Model_Session extends Mage_Core_Model_Session
+class Vianetz_SecureCookies_Model_Session extends Mage_Core_Model_Session
 {
     /**
      * @inheritDoc
